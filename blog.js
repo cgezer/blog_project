@@ -1,0 +1,8 @@
+
+/*
+JS
+NAME: Blog Project
+AUTHOR:By Celal GEZER
+DATE:09.05.2023
+VERSION:v.1
+*/
