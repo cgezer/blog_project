@@ -12,11 +12,7 @@
     <meta name="description" content="java, springboot,html,css3,js,bootstrap" />
     <meta name="author" content="Hamit Mızrak" />
     <meta name="" content="" />
-
-    <!-- Bootstrap CSS v5.2.1 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    
     <!-- Font awesome: CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
@@ -37,20 +33,92 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
+    <!-- Bootstrap CSS v5.2.1 -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- external CSS -->
     <link rel="stylesheet" href="blog.css">
 </head>
 
-
-<body data-spy="scroll" data-target="#navbar_id">
+<body data-spy="scroll" data-target="#navbar_first">
 
     <!-- start code -->
     <noscript>Bu web sitesi browseriniz tarafından desteklenmiyor</noscript>
 
-    <!-- navbar start -->
-    <navbar id="navbar_id"></navbar>
-    <!-- navbar end -->
+    <!-- navbar first -->
+      <!-- div.top_bar>div.container>div.row>(div.col-lg-7.col-md-9.col-xs-12>ul.clearfix.links>(li>i)*3)+(div.col-lg.col-md>div.first_right>a{Login}+a{Register})) -->
+    <navbar id="navbar_first">      
+        <div class="top_bar bg-primary">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-9 col-xs-12">
+                        <div class="first-left">
+                            <ul class="clearfix links">
+                                <i class="fa-brands fa-facebook"></i>
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-solid fa-blog"></i>
+                                <i class="fa-brands fa-youtube"></i>          
+                            </ul>     
+                        </div>                                           
+                    </div>
+                    <div class="col-lg col-md">
+                        <div class="first_right">
+                            <a href=""><i class="fa-solid fa-user-check"></i></a>
+                            <a href=""><i class="fa-solid fa-user-lock"></i></a>
+                        </div>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div> <!-- end top_bar -->
+    </navbar>
+    <!-- navbar first end -->
+
+    <!-- navbar second -->
+    <nav id="navbar_second" class="clearfix navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container-fluid bg-dark">
+            <a class="navbar-brand" href="#">
+                <img src="./img/logo.png" alt="it isnt logo showing" id="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="tags" class="form-control me-2" type="search" placeholder="Ara ..." aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Ara</button>
+                </form>
+            </div>
+        </div>
+    </nav>    
+    <!-- navbar second end -->
 
 
     <!-- header start -->
@@ -58,8 +126,32 @@
     <!-- header end -->
 
     <!-- main start -->
-    <main id="main_id"></main>
-    <section id="test">
+    <main id="main_id">
+        Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse voluptatem perferendis temporibus? Quis tempora minima harum? Dolore, id nemo suscipit delectus possimus commodi consequatur, accusamus architecto laborum quo doloribus.
+        Et libero excepturi inventore dolore aspernatur dicta explicabo, reprehenderit distinctio aperiam, laboriosam illum tenetur necessitatibus vitae ad impedit aut iure repellat corporis asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cum oris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
+        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
+        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
+        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cueius ipsam quia.vitae ad neque?adipisicing elit. Temporibus quae quas repellendus. Obcaecati, vero! Dignissimos ut repellat atque totam voluptate reprehenderit perspiciatis repellendus ab, esse optio aliquid autem culpa quos.
+    </main>
+    <!-- <section id="test">
         <p class="text-success line_clamp4">
             </class><i class="fa fa-address-book" aria-hidden="true"></i> Lorem ipsum dolor sit amet consectetur
             adipisicing elit. Vitae dicta officiis fugit nostrum totam, minima alias laudantium consequuntur! Doloribus
@@ -71,7 +163,7 @@
                 <li>item</li>
             </ul>
             <img src="./img/grand-canyon-g735c4c2cc_1920.jpg" alt="">
-            </section>
+            </section> -->
 
 
     <!-- main end -->

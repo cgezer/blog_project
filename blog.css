@@ -9,9 +9,14 @@ DESCRIPTION:
 */
 
 :root{
-    --template-bg: rgb(65, 60, 60);
-    --template-color:white;
-    ---parag-color:rgba(0,0,0,.7)
+    --template-bg: rgb(49, 49, 49);
+    --template-color: rgb(243, 218, 218);
+    --parag-color: rgba(233, 216, 216, 0.7);
+    --navbar-first-bg: rgba(0, 0, 0, .4);
+    --label-color:rgba(0, 0, 0, .9);
+    --dark-bg:rgba(0,0,0,0.9);
+    --dark-color:rgba(255,255,255,.9)
+
 }
 /*### COMMON PROPERTY ###*/
 *{
@@ -26,7 +31,7 @@ html{
 
 body {
     position: relative;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Wix Madefor Display', sans-serif;
     font-size: 1.1rem;/*1.1rem=1.1*15px*/
     background-color: var(--template-bg);
     color: var(--template-color);
@@ -34,33 +39,42 @@ body {
   ul{
     list-style-type: none;
   }
+  
   a{
     text-decoration: none;
   }
+  label{
+    color:var(--label-color);
+}
   i{
-    font-size: 2rem;
+    /*font-size: 1rem;*/
+    margin-right: .5rem;
     opacity: .9;
   }
+  i:hover{
+    cursor: pointer;
+  }
   p{
-    color: var(---parag-color);
+    color: var(--parag-color);
     font-weight: 200;
-    font-size: 1.4rem;
-    margin: .9rem .9rem;
+    font-size: 1.1rem;
+    margin: .4rem 0.4rem;
     font-family: 'Open Sans',sans-serif;
   }
   /* IMAGE */
   img{
     max-width: 100%;
     height: auto;
-    padding: 3rem;
+    padding: .8rem;
   }
   img:hover{
+    cursor: pointer;
     /*box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.5);*/
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
     transition: 2s all;
   }
   /* CLEARFIX */
-  my_clearFix::after{
+  .my_clearFix::after{
     content: "";
     display: block;
     clear: both;
@@ -94,4 +108,34 @@ body {
     overflow: hidden;
     text-overflow: ellipsis;
   }
+ /* ########################################################################## */
+ /* ### NAVBAR ### */
+ #navbar_first{
+    max-width: 100% !important;
+    max-height: 1rem;
+ }
+ #navbar_first .top_bar{
+background-color: var(--navbar-first-bg) !important;
+color: white;
+padding-top: 0.8rem;
+position: sticky;
+top: 5;
+ }
+ .first-left{
+    float: left;
+ }
+ .first_right{
+    float: right;
+ }
+ 
+ #logo{
+    max-width: 5rem;
+    border-radius: 50% 50%;
+ }
+ #logo:hover {
+    box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, .9);
+    transition: 1s all;
+ }
+ 
+
  
