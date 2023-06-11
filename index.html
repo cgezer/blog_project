@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
     <title>My Blog Project</title>
     <!-- Required meta tags -->
@@ -10,23 +9,25 @@
     <!-- SEO -->
     <meta name="title" content="blog" />
     <meta name="description" content="java, springboot,html,css3,js,bootstrap" />
-    <meta name="author" content="Hamit Mızrak" />
+    <meta name="author" content="Celal Gezer" />
     <meta name="" content="" />
-    
+
+
     <!-- Font awesome: CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 
     <!-- Google Font: CDN-->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@500&display=swap" rel="stylesheet">
+
     <!-- animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
-    <!-- sweet alert -->
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
     <!-- wow.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <script> new WOW().init()</script>
+    <script> new WOW().init() </script>
+
+    <!-- sweet alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <!-- jquery core and UI -->
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
@@ -34,89 +35,96 @@
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
 
     <!-- Bootstrap CSS v5.2.1 -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <!-- external CSS -->
     <link rel="stylesheet" href="blog.css">
 </head>
 
-<body data-spy="scroll" data-target="#navbar_first">
+<body data-bs-spy="scroll" data-bs-target="#navbar_first">
+    <!-- start codes -->
 
-    <!-- start code -->
-    <noscript>Bu web sitesi browseriniz tarafından desteklenmiyor</noscript>
+    <noscript>Bu web sitesi sizin browserınız tarafından desteklenmiyor</noscript>
 
-    <!-- navbar first -->
-      <!-- div.top_bar>div.container>div.row>(div.col-lg-7.col-md-9.col-xs-12>ul.clearfix.links>(li>i)*3)+(div.col-lg.col-md>div.first_right>a{Login}+a{Register})) -->
-    <navbar id="navbar_first">      
+    <!-- navbar first start -->
+    <!-- div.top_bar>div.container>div.row>(div.col-lg-7.col-md-9.col-xs-12>ul.clearfix.links>(li>i)*3)+(div.col-lg.col-md>div.first_right>a{Login}+a{Register}))
+    -->
+    <navbar id="navbar_first">
         <div class="top_bar bg-primary">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-7 col-md-9 col-xs-12">
-                        <div class="first-left">
-                            <ul class="clearfix links">
+                        <div class="first_left ">
+                            <ul class="clearfix links clearfix">
                                 <i class="fa-brands fa-facebook"></i>
                                 <i class="fa-brands fa-linkedin"></i>
                                 <i class="fa-solid fa-blog"></i>
-                                <i class="fa-brands fa-youtube"></i>          
-                            </ul>     
-                        </div>                                           
-                    </div>
-                    <div class="col-lg col-md">
-                        <div class="first_right my_clearfix">
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login_modal"><i class="fa-solid fa-user-check"></i></button>
-                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_modal"><i class="fa-solid fa-user-lock"></i></button>
+                                <i class="fa-brands fa-youtube"></i>
+                            </ul>
                         </div>
                     </div>
-                </div><!-- end row -->
-            </div><!-- end container -->
-        </div> <!-- end top_bar -->
-    </navbar>
-    <!-- navbar first end -->
 
-    <!-- LOGIN -->    
-    <!-- Modal Body -->
-    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-    <div class="modal fade" id="login_modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+                    <div class="col-lg col-md ">
+                        <!-- Checked switch -->
+                        <!-- <span class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked />
+                          </span> -->
+                        <div class="first_right my_clearFix">
+                            <button id="dark_mode" onclick="darkMode()" class="btn btn-warning"><i class="fa-solid fa-circle-half-stroke"></i></button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#login_modal"><i
+                                    class="fa-solid fa-user-check"></i></button>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#register_modal"><i
+                                    class="fa-solid fa-user-lock"></i></button>
+                        </div>
+                    </div>
+                </div><!-- end row-->
+            </div> <!-- end container-->
+        </div><!-- end top_bar-->
+    </navbar>
+
+    <!-- LOGIN -->
+    <div class="modal fade" id="login_modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-lg" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Login</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="modalTitleId">Üye Giriş</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="get">
                         <div class="form-group mb-3">
                             <label for="login_email">Email</label>
-                            <input type="email" id="login_email" name="login_email" class="input form-control" placeholder="email adress" required autofocus="true"></input>
-                        </div>
-                        <div class="form-group">
-                            <label for="login_password">Password</label>
-                            <input type="password" id="login_password" name="login_password" class="input form-control" placeholder="password" required autofocus="false"></input>
+                            <input type="email" id="login_email"  name="login_email" class="input form-control" placeholder="email address" required autofocus="true"></input>
                         </div>
                         <div class="form-group mb-3">
-                            <button type="reset" class="btn btn-danger">Clear</button>
-                            <button type="submit" class="btn btn-primary">Send</button>
+                            <label for="login_password ">Password</label>
+                            <input type="password" id="login_password"  name="login_password" class="input form-control" placeholder="pasword" required autofocus="false"></input>
+                        </div>
+
+                        <div class="form-group mb-3">
+                            <button type="reset" class="btn btn-danger">Temizle</button>
+                            <button type="submit" class="btn btn-primary">Gönder</button>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary">Kaydet</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    <!-- REGISTER -->    
-    <!-- Modal Body -->
-    <!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
-    <div class="modal fade" id="register_modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+
+    <!-- REGISTER -->
+    <div class="modal fade" id="register_modal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"
+        role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="modalTitleId">Register</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <h5 class="modal-title" id="modalTitleId">Üye Kayıt</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     Body
@@ -128,8 +136,9 @@
             </div>
         </div>
     </div>
-    
-    <!-- navbar second -->
+    <!-- navbar first  end -->
+
+    <!-- navbar second start -->
     <nav id="navbar_second" class="clearfix navbar navbar-expand-sm navbar-dark bg-dark">
         <div class="container-fluid bg-dark">
             <a class="navbar-brand" href="#">
@@ -172,9 +181,8 @@
                 </form>
             </div>
         </div>
-    </nav>    
-    <!-- navbar second end -->
-
+    </nav>
+    <!-- navbar second  end -->
 
     <!-- header start -->
     <header id="header_id"></header>
@@ -182,54 +190,42 @@
 
     <!-- main start -->
     <main id="main_id">
-        Lorem ipsum dolor sit amet, consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi esse voluptatem perferendis temporibus? Quis tempora minima harum? Dolore, id nemo suscipit delectus possimus commodi consequatur, accusamus architecto laborum quo doloribus.
-        Et libero excepturi inventore dolore aspernatur dicta explicabo, reprehenderit distinctio aperiam, laboriosam illum tenetur necessitatibus vitae ad impedit aut iure repellat corporis asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cum oris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cuoris asperiores voluptatem? Commodi optio vero doloribus consequatur rerum!
-        Adipisci totam doloribus aliquam consequatur explicabo ullam excepturi aut nihil. Modi ex, possimus labore unde sit ab natus repellendus ut nobis quod harum quasi odio laboriosam necessitatibus Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officiis pariatur nostrum accusantium, qui corporis, provident deleniti minus exercitationem aliquid impedit quod iste voluptatibus libero, reprehenderit saepe nisi repellat. Labore, saepe?
-        Repellat neque laborum fuga odio doloribus culpa unde inventore harum aliquid delectus, sapiente aperiam distinctio vel nemo perferendis totam quibusdam quis itaque? Ipsam quasi natus expedita vitae, minus error et!
-        Deserunt sit nemo maxime nam omnis magni. Tempore dolores sapiente aliquam esse. Sed officiis, voluptates a quos cumque neque! Adipisci provident dolores non facilis atque tenetur cueius ipsam quia.vitae ad neque?adipisicing elit. Temporibus quae quas repellendus. Obcaecati, vero! Dignissimos ut repellat atque totam voluptate reprehenderit perspiciatis repellendus ab, esse optio aliquid autem culpa quos.
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem laboriosam quas doloremque ad blanditiis porro atque laborum! Aut perferendis rem minima voluptate aperiam voluptatum laudantium, animi ea quam necessitatibus quod. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, corrupti. Earum nemo molestias doloremque quibusdam officia facere libero nobis ea asperiores minus explicabo aut dicta officiis cum dignissimos, nulla enim.
+        Vel neque dignissimos id vitae accusamus enim error doloribus voluptatibus. Suscipit voluptatem libero est molestias aperiam quis. Commodi, modi molestiae. Aliquid nulla nesciunt culpa quo consequatur repellendus, harum alias eos.
+        Adipisci sequi omnis laborum voluptatem illo eveniet velit odio laboriosam possimus iusto tempora dolor sapiente sunt quaerat, expedita id harum voluptatibus facilis! Facere natus, laborum sit voluptate perspiciatis nesciunt tempora.
+        Necessitatibus laboriosam laudantium non itaque dignissimos totam officia illo consequuntur quidem. Pariatur rem voluptatem a? Quasi ad magnam ipsum, dolore illo commodi vero consequuntur ut. Optio excepturi odit laboriosam tempore!
+        Rem minima eum vel odio, accusamus cupiditate, laborum voluptatibus quisquam animi in eaque excepturi quasi dicta. Et quidem eos veritatis tenetur totam quisquam, iure nisi esse minima est aut corporis.
+        Dolorem eum et voluptatibus consequatur tenetur quis, recusandae doloremque, error possimus reprehenderit voluptatem porro laboriosam magni delectus? Nam, harum laborum tempore temporibus quae et, porro maiores recusandae quia eligendi obcaecati.
+        Quo modi quod suscipit quos consequuntur a qui amet quis aliquid? Rem doloremque doloribus id quod iste laudantium asperiores repellat, at repudiandae sequi necessitatibus eos accusantium minima, in cumque voluptatum.
+        Temporibus non sit tempore laboriosam tenetur accusamus maxime eligendi. Aliquam blanditiis, voluptas nemo harum dolorum ex praesentium eaque quo rerum iure. Commodi cumque necessitatibus a. Consequuntur minima iusto ipsa quaerat!
+        Tempore quam mollitia maiores aliquam consequuntur et excepturi quibusdam fuga. Voluptatem, voluptates! Veniam, illum vitae! Eveniet animi nesciunt laborum repellat aliquam ut quaerat ducimus adipisci fuga, unde asperiores labore sapiente?
+        Fugiat eligendi quam, iusto, nostrum officia dolorem optio eveniet dolorum, similique pariatur maxime. Nisi iste praesentium excepturi quas doloremque quisquam provident est hic saepe? Laborum nam provident numquam quisquam quaerat.
+        Ullam delectus velit voluptates molestias! Amet doloremque atque error? Ab reiciendis laudantium tempore cumque autem, quae ex animi numquam perspiciatis ut modi, soluta beatae quos consectetur iste dolores quas reprehenderit.
+        Ex temporibus, porro illo, reiciendis excepturi mollitia, necessitatibus quos vero ratione quaerat dicta quidem! Facilis alias iure similique quo consequuntur dolorem doloremque fugit soluta ut aperiam. Qui expedita illum vel?
+        Nemo, temporibus, repellendus minus molestias quaerat incidunt excepturi eveniet aperiam tempora esse mollitia, obcaecati quis corporis eligendi aut modi deserunt ducimus corrupti? Quasi aut sed iusto minus officia sit rem.
+        Nulla veritatis minima eaque porro magni voluptate deleniti impedit ab nemo mollitia sit repellat delectus maiores libero, eum quisquam similique modi a tempore adipisci fuga voluptas consectetur illum perferendis! Quasi!
+        Assumenda quos quas quibusdam? Deserunt nostrum beatae molestias. Facilis totam voluptatibus aspernatur pariatur, reiciendis fugiat rerum numquam molestiae laborum labore. Nisi nobis, eaque aut repellat neque dolor! Vel, optio itaque.
+        Qui, neque voluptates adipisci odio, ut sint possimus quas eveniet eligendi totam est. Placeat saepe reprehenderit similique dolores accusamus ab, sint, corrupti illum delectus natus ex molestias, numquam fuga. Tenetur.
+        Fugit nihil consequuntur cum quidem laborum nesciunt error, aspernatur neque obcaecati! Quod porro ex ipsa sunt, odit aliquid enim quae error, molestiae consectetur laborum totam asperiores et officia ipsum laboriosam?
+        Quo repellendus magnam delectus itaque, tenetur omnis fuga sit a. Molestiae, accusantium cum, enim totam officia, voluptatum quis perferendis sunt in sint cupiditate aliquid. Voluptas fuga aspernatur similique ex minima?
+        Sint iste debitis, hic a aperiam ad autem nobis eos ducimus sunt dignissimos quos, eaque nihil. Officia accusamus, eligendi quam, repellendus, reprehenderit nemo aspernatur tempore aut quis molestiae hic saepe?
+        Asperiores dolorem repudiandae, labore quidem deserunt, dolores sapiente voluptas natus ducimus consequatur suscipit aspernatur, et provident mollitia cumque quibusdam harum voluptatem exercitationem eligendi! Impedit porro, blanditiis cum esse autem delectus. sapiente totam consectetur harum veniam impedit accusamus, itaque suscipit eos ipsum perspiciatis veritatis incidunt, magnam maxime adipisci consequuntur repudiandae accusantium! Cumque excepturi dolore aut ducimus officia ad, reprehenderit amet.
+        Nesciunt harum itaque, libero eaque esse vitae autem quis voluptas sint, obcaecati doloremque cum dolor eum repellendus impedit quas dicta voluptatum, non delectus. Vero consequuntur sequi, at voluptatum assumenda nihil?</p>
     </main>
-    <!-- <section id="test">
-        <p class="text-success line_clamp4">
-            </class><i class="fa fa-address-book" aria-hidden="true"></i> Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Vitae dicta officiis fugit nostrum totam, minima alias laudantium consequuntur! Doloribus
-            voluptatem iusto tempora Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora veritatis laborum dolores blanditiis nam accusantium omnis Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam fuga facilis dicta vitae voluptate pariatur quae voluptatum quo, molestiae, libero repellendus id dolorem minus illo sequi repudiandae iure nihil labore.quo, voluptatibus nisi laboriosam error impedit neque quisquam eaque doloribus non id repellendus ut! temporibus eius exercitationem deleniti enim iure excepturi quod.</p>
-            <a href="">test</a>
-            <ul>
-                <li>item</li>
-                <li>item</li>
-                <li>item</li>
-            </ul>
-            <img src="./img/grand-canyon-g735c4c2cc_1920.jpg" alt="">
-            </section> -->
-
-
     <!-- main end -->
+
 
     <!-- footer start -->
     <footer id="footer_id"></footer>
     <!-- footer end -->
 
-    <!-- end code -->
 
+    <!-- back top -->
+    <a href="#navbar_first" id="back_top" class="btn btn-sm btn-primary">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
 
+    <!-- end codes -->
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
@@ -238,8 +234,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
-    <!-- external JS -->
-    <script>src = "../js"</script>
-</body>
 
+    <!-- external JS -->
+    <script src="blog.js"></script>
+</body>
 </html>

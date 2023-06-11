@@ -14,8 +14,8 @@ DESCRIPTION:
     --parag-color: rgba(233, 216, 216, 0.7);
     --navbar-first-bg: rgba(0, 0, 0, .4);
     --label-color:rgba(0, 0, 0, .9);
-    --dark-bg:rgba(0,0,0,0.9);
-    --dark-color:rgba(255,255,255,.9)
+    --dark-bg:rgba(160, 60, 60, 0.9);
+    --dark-color:rgba(255,255,255,.9);
 
 }
 /*### COMMON PROPERTY ###*/
@@ -114,6 +114,25 @@ body {
     max-width: 100% !important;
     max-height: 1rem;
  }
+ .first-left{
+    float: left;
+ }
+ .first_right{
+    float: right;
+ }
+ .dark_mode_classlist{
+    background-color: var(--dark-bg)!important;
+    color:var(--dark-color)!important;
+}
+#navbar_second {
+    max-width: 100% !important;
+    max-height: 8rem;
+    padding-top: 0.8rem;
+    position: sticky;
+    top: 0;
+    opacity: .8 !important;
+}
+
  #navbar_first .top_bar{
 background-color: var(--navbar-first-bg) !important;
 color: white;
@@ -121,21 +140,16 @@ padding-top: 0.8rem;
 position: sticky;
 top: 5;
  }
- .first-left{
-    float: left;
- }
- .first_right{
-    float: right;
- }
  
- #logo{
-    max-width: 5rem;
+#logo {
+    width: 5rem;
     border-radius: 50% 50%;
- }
- #logo:hover {
+}
+
+#logo:hover {
     box-shadow: 1px 1px 5px 1px rgba(255, 255, 255, .9);
-    transition: 1s all;
- }
+    transition: 2s all;
+}
  
 
  
